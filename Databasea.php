@@ -87,22 +87,6 @@ class Databasea
         );
         return $getProducts->fetch();
     }
-
-    public function PutProductsFromJson($name, $category, $sku, $price, $quantity)
-    {
-        $ExistProductFromJson = $this->connection->prepare('INSERT INTO products (name , category, sku, price, quantity)
- values (:name, :category, :sku, :price, :quantity);');
-        $ExistProductFromJson->execute(
-            [
-                ':name' => $name,
-                ':category' => $category,
-                ':sku' => $sku,
-                ':price' => $price,
-                ':quantity' => $quantity,
-            ]
-        );
-    }
-
     public function getProductForUpdate($name)
     {
         $statement = $this->connection->query('select name, category, sku, price, quantity  from products where name ="' . $name . '";');

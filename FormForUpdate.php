@@ -1,6 +1,5 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+
 require_once 'Databasea.php';
 $database = new Databasea();
 $products = $database->getProductForUpdate($_GET['name']);

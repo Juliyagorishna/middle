@@ -1,7 +1,6 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+
 
 try {
     $string = file_get_contents(__DIR__ . '/catalog.json');

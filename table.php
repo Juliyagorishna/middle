@@ -1,24 +1,10 @@
 <?php
-//var_dump($_POST);
+
 require_once 'Databasea.php';
 session_start();
 if (isset($_COOKIE['user'])) {
     echo "Привет, " . $_COOKIE['user'] . " Добро пожаловать";
 }
-
-
-//error_reporting(E_ALL);
-//ini_set('display_errors', 1);
-//$host = 'mysql';
-//$port = 3306;
-//$dbname = 'study';
-//$username = 'root';
-//$password = 'root';
-//
-//$connection = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
-
-//$catalogArrey = getJson();
-
 
 ?>
 <html>
@@ -34,23 +20,9 @@ if (isset($_COOKIE['user'])) {
         <td>price</td>
         <td>quantity</td>
     </tr>
-<!--    --><?php
-//
-//    foreach ($catalogArrey['products'] as $value) : ?>
-<!--    <tr>-->
-<!--        <td>--><?//= $value['name']; ?><!--</td>-->
-<!--        <td>--><?//= $value['category']; ?><!--</td>-->
-<!--        <td>--><?//= $value['sku']; ?><!--</td>-->
-<!--        <td>--><?//= $value['price']; ?><!--</td>-->
-<!--        <td>--><?//= $value['quantity']; ?><!--</td>-->
-<!--    </tr>-->
-<!--        --><?php
-//        endforeach;
-//        ?>
+
            <?php
-           //foreach ($catalogArrey['products'] as $value)
-//$statement = $connection->query('select * from products');
-//$products = $statement->fetchAll();
+
            $database = new Databasea();
            $products = $database->getAll();
            $user = $database->GetUserCookie($_COOKIE['user']);

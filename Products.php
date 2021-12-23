@@ -14,7 +14,6 @@ class Products
     }
     public function Getdata ($data)
     {
-        //$data = $_POST;
         $product = [
             'name' => $data['name'],
             'category' => $data["category"],
@@ -23,9 +22,7 @@ class Products
             'quantity' => $data["quantity"]];
         return $product;
     }
-     public function IsExistProductOOP (array  $product, array $value) {
-        return $product['name'] === $value['name'] && $product['category'] === $value ['category'];
-         }
+
     public function getJson () {
         $catalog = file_get_contents(__DIR__ . '/catalog.json');
         return json_decode($catalog, true);
