@@ -32,7 +32,7 @@ foreach ($products as $valueProduct) {
     '<tr>';
     if ($user != 0) {
         echo
-            '<td> <a href="FormForUpdate.php?name=' . $valueProduct['name'] . '">' . $valueProduct['name'] . '</a> </td>';
+            '<td> <a href="index.php?action=show-form-for-update&name=' . $valueProduct['name'] . '">' . $valueProduct['name'] . '</a> </td>';
     } else {
         echo
             '<td> ' . $valueProduct['name'] . '</td>' ;

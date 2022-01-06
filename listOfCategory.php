@@ -15,7 +15,7 @@ $category = $database->getCategory();
         foreach ($category as $valuecategory) {
      echo
 
-            '<li><a href="CategoryWithProduct.php?category=' .  $valuecategory['category'] . '">'
+            '<li><a href="index.php?action=show-category-with-product&category=' .  $valuecategory['category'] . '">'
             . $valuecategory['category'] . '</li> </a>';
         };
 
